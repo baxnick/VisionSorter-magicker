@@ -64,8 +64,8 @@ if ARGV.size < 3
 end
 
 $o_ppi = 300
-$o_size = [209.97, 297.01]
-$o_margin = [12.0, 15.0]
+$o_size = [210, 297]
+$o_margin = [7.5, 7.5]
 $o_actual = [$o_size[0] - $o_margin[0] * 2, $o_size[1] - $o_margin[1] * 2]
 $o_actual_pix = $o_actual.collect {|i| scale_ppi(i, 300)}
 $o_final_pix = $o_size.collect{|i| scale_ppi(i, 300)}
@@ -99,5 +99,5 @@ images.batch(layout.max_intake()){ |farr|
     system("mogrify -gravity center -extent %dx%d %s" % [$o_final_pix[0], $o_final_pix[1], output_full])
 }
 
-system("convert %s_* %s.pdf" % [$output_file, $output_file])
+system("convert -density 300x300 %s_* %s.pdf" % [$output_file, $output_file])
 

@@ -1,0 +1,13 @@
+IdMagicker.rb
+   Fairly straightforward to use. Configuration via a combination of global variables and command line.
+   
+   Known Issues:
+      Leaves more margin than it should, the marker and page margin double up at the edge
+
+CubeMagicker.rb
+   Also fairly straightforward, just give it 6 ids. Start the program with no arguments to see the order.
+
+   Known Issues:
+      Despite appearances to the contrary, the program only works with various marker/margin combos up to 60mm. This is because there is no resize step available.
+      This would be fairly easy to add in however, it would mainly be a matter of using a scaling method that plays nice with the line art.
+

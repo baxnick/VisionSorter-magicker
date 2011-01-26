@@ -1,0 +1,74 @@
+# number of markers
+6
+
+#PICTURE THE DIRECTIONAL DESCRIPTIONS AS REFERRING TO A CAR
+# "LEFT" "FRONT" ARE RELATIVE TO THE WAY THE CAR IS FACING
+
+#IF YOU CHANGE THE CUBE/MARKER SIZE, YOU WILL NEED TO CHANGE 
+#THE SIZE AND TRANSLATION VALUES ACCORDINGLY
+
+#WHY AM I WRITING IN ALL CAPS?
+
+
+
+#1 - BACK
+#ROTATE X -90
+100                              # marker id
+50.0                             # size in mm
+0.0 0.0                          # x and y offset from marker center
+1.0000  0.0000 0.0000 0.0        # x translation (applied after rotation)
+0.0000  0.0000 -1.0000 -30.0     # y
+0.0000  1.0000 0.0000 0.0        # z 
+
+#  ^^
+#  The 3x3 rotation matrix, I've worked these out for 
+#  you, you won't need to touch them.
+
+#2 - LEFT
+#ROTATE X -90
+#ROTATE Z 90
+101
+50.0
+0.0 0.0
+0.0000  0.0000 -1.0000 -30.0
+-1.0000  0.0000 0.0000 0.0
+0.0000  1.0000 0.0000 0.0
+
+#3 - FRONT
+#ROTATE Z 180
+#ROTATE X -90
+102
+50.0
+0.0 0.0
+-1.0000  0.0000 0.0000 0.0
+0.0000  0.0000 1.0000 30.0
+0.0000 1.0000 0.0000 0.0
+
+#4 - RIGHT
+#ROTATE Z -90
+#ROTATE X -90
+103
+50.0
+0.0 0.0
+0.0000  0.0000 1.0000 30.0
+1.0000  0.0000 0.0000 0.0
+0.0000  1.0000 0.0000 0.0
+
+#5 - TOP
+104
+50.0
+0.0 0.0
+1.0000  0.0000 0.0000 0.0
+0.0000  1.0000 0.0000 0.0
+0.0000  0.0000 1.0000 30.0
+
+
+#6 - BOTTOM
+#ROTATE X 180
+
+105
+50.0
+0.0 0.0
+1.0000  0.0000 0.0000 0.0
+0.0000  -1.0000 0.0000 0.0
+0.0000  0.0000 -1.0000 -30.0

@@ -9,12 +9,12 @@ def scale_ppi(real, ppi)
 end
 
 if ARGV.size < 9
-    puts "Args: (output file) (marker size) (marker padding) (front) (left) (back) (right) (top) [bottom]"
+    puts "Args: (output file) (marker size) (marker padding) (back) (left) (front) (right) (top) [bottom]"
     exit
 end
 
 $o_ppi = 300
-$o_size = [209.97, 297.01]
+$o_size = [210, 297]
 $o_margin = [12.0, 15.0]
 $o_actual = [$o_size[0] - $o_margin[0] * 2, $o_size[1] - $o_margin[1] * 2]
 $o_actual_pix = $o_actual.collect {|i| scale_ppi(i, 300)}
